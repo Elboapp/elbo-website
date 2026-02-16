@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elbo — Making Social Media Human</title>
+  <meta name="description" content="Elbo — Making Social Media Human. Join the waitlist for early access." />
+
+  <style>
+    :root{
+      --bg:#000;
+      --text:#F4F6FF;
+      --muted:rgba(244,246,255,0.72);
+      --card:rgba(255,255,255,0.04);
+      --stroke:rgba(255,255,255,0.10);
+      --field:rgba(255,255,255,0.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      color:var(--text);
+
+      background:
+        radial-gradient(900px 520px at 30% 25%, rgba(44,108,255,0.18), transparent 60%),
+        radial-gradient(820px 520px at 75% 30%, rgba(57,255,20,0.14), transparent 60%),
+        var(--bg);
+    }
+
+    .wrap{
+      width:100%;
+      max-width:860px;
+      text-align:center;
+    }
+
+    .logo{
+      width:min(720px, 92vw);
+      height:auto;
+      display:block;
+      margin:0 auto 18px;
+      filter:
+        drop-shadow(0 0 22px rgba(44,108,255,0.18))
+        drop-shadow(0 0 18px rgba(57,255,20,0.12));
+    }
+
+    .headline{
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:-0.01em;
+      margin:0 0 10px;
+      color:rgba(244,246,255,0.92);
+    }
+
+    .sub{
+      margin:0 auto 22px;
+      max-width:560px;
+      font-size:15px;
+      line-height:1.55;
+      color:var(--muted);
+    }
+
+    .card{
+      margin:0 auto;
+      max-width:560px;
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:18px;
+      backdrop-filter: blur(10px);
+    }
+
+    form{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    input{
+      flex:1;
+      min-width:240px;
+      padding:14px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:var(--field);
+      color:var(--text);
+      font-size:15px;
+      outline:none;
+    }
+
+    button{
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.14);
+      background:rgba(255,255,255,0.08);
+      color:var(--text);
+      font-weight:650;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    button:hover{ background:rgba(255,255,255,0.12); }
+
+    .tiny{
+      margin-top:10px;
+      font-size:12px;
+      color:rgba(244,246,255,0.55);
+    }
+
+    .links{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      color:rgba(244,246,255,0.70);
+      text-decoration:none;
+      font-size:14px;
+    }
+    .links a:hover{color:rgba(244,246,255,0.95)}
+
+    .foot{
+      margin-top:22px;
+      font-size:12px;
+      color:rgba(244,246,255,0.40);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <img class="logo" src="elbo-logo.png" alt="Elbo" />
+
+    <div class="headline">Making Social Media Human</div>
+    <div class="sub">Join the waitlist for early beta access and launch updates.</div>
+
+    <div class="card">
+      <form method="POST" action="FORM_ACTION_URL_HERE">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Join Waitlist</button>
+      </form>
+      <div class="tiny">No spam. Just beta + launch updates.</div>
+    </div>
+
+    <div class="links">
+      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noreferrer">X (Twitter)</a>
+    </div>
+
+    <div class="foot">© <span id="y"></span> Elbo</div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
