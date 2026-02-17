@@ -134,6 +134,50 @@
       font-size:12px;
       color:rgba(244,246,255,0.40);
     }
+      /* ---- Force MailerLite embedded form to dark mode ---- */
+.ml-form-embedContainer,
+.ml-form-embedWrapper,
+.ml-form-embedBody,
+.ml-form-embedContent,
+.ml-form-formContent,
+.ml-form-successBody,
+.ml-form-successContent {
+  background: transparent !important;
+  color: #F4F6FF !important;
+}
+
+.ml-form-embedContainer * {
+  color: #F4F6FF !important;
+}
+
+.ml-form-embedContainer input,
+.ml-form-embedContainer textarea,
+.ml-form-embedContainer select {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: #F4F6FF !important;
+}
+
+.ml-form-embedContainer input::placeholder {
+  color: rgba(244,246,255,0.55) !important;
+}
+
+.ml-form-embedContainer button,
+.ml-form-embedContainer .ml-form-embedSubmit button {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  color: #F4F6FF !important;
+  border-radius: 14px !important;
+}
+
+.ml-form-embedContainer button:hover,
+.ml-form-embedContainer .ml-form-embedSubmit button:hover {
+  background: rgba(255,255,255,0.14) !important;
+}
+
+
+    
+
   </style>
 </head>
 
